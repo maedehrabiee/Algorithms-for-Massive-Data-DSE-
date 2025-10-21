@@ -1,0 +1,686 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\ifPDFTeX
+  \TeXXeTstate=1
+  \newcommand{\RL}[1]{\beginR #1\endR}
+  \newcommand{\LR}[1]{\beginL #1\endL}
+  \newenvironment{RTL}{\beginR}{\endR}
+  \newenvironment{LTR}{\beginL}{\endL}
+\fi
+\ifluatex
+  \newcommand{\RL}[1]{\bgroup\textdir TRT#1\egroup}
+  \newcommand{\LR}[1]{\bgroup\textdir TLT#1\egroup}
+  \newenvironment{RTL}{\textdir TRT\pardir TRT\bodydir TRT}{}
+  \newenvironment{LTR}{\textdir TLT\pardir TLT\bodydir TLT}{}
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\begin{titlepage}
+    \noindent
+
+    \centering
+    {\Large \tituloTesis \par}
+    \vspace{2cm}
+    Similar Amazon Book Reviews\par
+    \vspace{1cm}
+    \textbf{  Maedeh Rabiee}
+    \vspace{2cm}
+    
+    \textbf{Algorithms for Massive Data Project}\par
+    \vspace{1cm}
+    \textbf{Data science for Economics(DSE)}\par
+    \vspace{1cm}
+    \textbf{Professor Malchiodi}\par
+    \vspace{1cm}
+    \textbf{October 2025}\
+    
+    \vspace{1cm}
+    \textbf{University of Milan}}\
+    \vspace{1cm}
+    \ciudad \par
+    \mesanio
+\end{titlepage}
+\begin{document}
+%\pagenumbering{roman} % Start roman numbering
+\clearpage\maketitle
+\thispagestyle{empty}
+%\begin{center}
+ %   \begin{figure}[h]
+  %      \centering
+   %     \includegraphics[width=10cm]{unimi.png}
+        %\caption{Your caption here}
+  %      \label{fig:logo}
+   % \end{figure}
+  %  \large {Similar Amazon Books Reviews \\
+
+    
+   % Name: Maedeh Rabiee
+
+%Algorithms for Massive Data Project
+%\vspace{1cm}
+% Data science for Economics(DSE)
+%\vspace{1cm}
+%Professor Malchiodi
+%\vspace{1cm}
+%October 2025
+%\vspace{3cm}
+%University of Milan}
+%\end{center}
+
+
+%\begin{center}
+%    \begin{figure}[h]
+%        \centering
+%        \includegraphics[width=10cm]{unimi.png}
+        %\caption{Your caption here}
+%        \label{fig:logo}
+%    \end{figure}
+%\end{center}
+
+%\includegraphics[width=2.01 in,height=2.1in]{unimi.png} \\
+\end{longtable}
+}
+\newpage
+
+Table of Contents
+
+\hyperref[introduction]{1. Introduction \hyperref[introduction]{3}}
+
+\hyperref[dataset-description]{2. Dataset Description
+\hyperref[dataset-description]{4}}
+
+\hyperref[exploratory-data-analysis-eda]{3. Exploratory Data Analysis
+(EDA) \hyperref[exploratory-data-analysis-eda]{5}}
+
+\hyperref[missing-values]{3.1  Missing Values
+\hyperref[missing-values]{5}}
+
+\hyperref[duplicate-detection]{3.2 Duplicate Detection
+\hyperref[duplicate-detection]{5}}
+
+\hyperref[data-organization-and-pre-processing]{4. Data Organization and
+Pre-processing \hyperref[data-organization-and-pre-processing]{5}}
+
+\hyperref[sampling]{4.1 Sampling \hyperref[sampling]{5}}
+
+\hyperref[text-normalization]{4.2 Text Normalization
+\hyperref[text-normalization]{6}}
+
+\hyperref[shingling]{5. Shingling \hyperref[shingling]{6}}
+
+\hyperref[MinHash Signatures]{6. MinHash Signatures \hyperref[MinHash Signatures]{6}}
+
+\hyperref[locality-sensitive-hashing-lsh]{7. Locality-Sensitive Hashing
+(LSH) \hyperref[locality-sensitive-hashing-lsh]{6}}
+
+\hyperref[lsh-parameters-and-setup]{7.1 LSH Parameters and Setup
+\hyperref[lsh-parameters-and-setup]{7}}
+
+\hyperref[similarity-computation-and-verification]{8. Similarity
+Computation and Verification
+\hyperref[similarity-computation-and-verification]{7}}
+
+\hyperref[results]{8.1 Results \hyperref[results]{8}}
+
+\hyperref[similarity-distribution]{8.2 Similarity Distribution
+\hyperref[similarity-distribution]{8}}
+
+\hyperref[similarity-evaluation]{9. Similarity Evaluation
+\hyperref[similarity-evaluation]{8}}
+
+\hyperref[example-of-similar-pairs]{10. Example of Similar Pairs
+\hyperref[example-of-similar-pairs]{9}}
+
+\hyperref[conclusion]{11. Conclusion \hyperref[conclusion]{10}}
+
+\hyperref[references]{12. References \hyperref[references]{10}}
+
+\hyperref[declaration-by-author]{13. Declaration by author
+\hyperref[declaration-by-author]{11}}
+
+\newpage
+\section{Introduction}\label{introduction}
+
+This project focuses on detecting similar book reviews within a large
+textual dataset using Jaccard similarity, MinHash signatures, and
+Locality-Sensitive Hashing (LSH). The primary objective is to
+efficiently identify near-duplicate or highly similar reviews among
+millions of Amazon Book Reviews without performing exhaustive pairwise
+similarity computations across all documents.
+
+Traditional similarity computation exhibits a quadratic time complexity
+of O(n²), rendering it computationally infeasible for large-scale
+datasets. To address this challenge, MinHashing and LSH techniques are
+employed to approximate Jaccard similarity and drastically reduce the
+number of required comparisons while maintaining reliable accuracy.
+
+For implementation, the Datasketch Python library was utilized to
+perform both MinHash signature generation and LSH indexing. Datasketch
+offers efficient and well-optimized data structures for probabilistic
+similarity estimation, enabling scalable processing of large textual
+datasets.
+
+Furthermore, Datasketch performs exceptionally well within the free tier
+of Google Colab, which provides limited memory and computational
+resources. Its efficient design allows the entire pipeline---from
+shingling to similarity detection---to execute smoothly even in
+constrained environments, without requiring paid GPU/TPU support. This
+makes Datasketch a practical and powerful choice for academic
+experiments and large-scale text similarity detection tasks conducted on
+cloud-based platforms such as Colab.
+\newpage
+\section{Dataset Description}\label{dataset-description}
+
+The dataset was obtained from Kaggle:
+
+�� "Amazon Books Reviews" by Mohamed Bakhet
+
+The dataset used in this project contains approximately 3 million Amazon
+book reviews, covering 212,404 unique book titles and their
+corresponding user reviews. It comprises 10 columns, each providing
+distinct metadata about books and reviewers:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2661}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3442}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Column Name
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Id & Unique book identifier \\
+Title & Title of the book \\
+Price & Price of the book \\
+User\_id & Reviewer's unique ID \\
+profileName & Reviewer's name \\
+review/helpfulness & Ratio of helpful votes \\
+review/score & Rating (1--5) \\
+review/time & UNIX timestamp \\
+review/summary & Short summary \\
+\textbf{review/text} & Full text of the review \\
+
+\end{longtable}
+}
+
+Overall, the dataset is rich in textual data and provides sufficient
+variation for natural language analysis. The review/text column served
+as the primary source for the similarity detection task, as it contains
+the complete textual content of each review.
+\newpage
+\section{Exploratory Data Analysis
+(EDA)}\label{exploratory-data-analysis-eda}
+
+Before applying the algorithms, I performed an initial Exploratory Data
+Analysis (EDA) to understand the structure, quality, and potential
+issues in the dataset.
+
+\subsection{ Missing Values}\label{missing-values}
+
+The table below shows the number and percentage of missing values in
+each column:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2815}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1941}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2226}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Column
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Nulls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Percent (\%)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Id & 0 & 0.00\% \\
+Title & 208 & 0.01\% \\
+Price & 2,518,829 & 83.96\% \\
+User\_id & 561,787 & 18.73\% \\
+ProfileName & 561,905 & 18.73\% \\
+Review/Helpfulness & 0 & 0.00\% \\
+Review/Score & 0 & 0.00\% \\
+Review/Time & 0 & 0.00\% \\
+Review/Summary & 407 & 0.01\% \\
+Review/Text & 8 & 0.00\% \\
+Total & 3,643,144 & --- \\
+\end{longtable}
+}
+
+\subsection{Duplicate Detection}\label{duplicate-detection}
+
+A duplicate check revealed:
+
+\begin{itemize}
+\item
+  8,774 rows where all columns were identical (≈0.29\% of the dataset).
+\end{itemize}
+
+\section{\texorpdfstring{ Data Organization and
+Pre-processing}{ Data Organization and Pre-processing}}\label{data-organization-and-pre-processing}
+
+\begin{itemize}
+\item
+  Firstly Duplicated 8,774 rows where all columns were identical were
+  removed to ensure that each review was unique.
+\end{itemize}
+
+For similarity analysis, I retained only the two relevant columns: `Id'
+and `review/text'.\\
+Rows with missing review texts were dropped, leaving 2,991,218 unique
+reviews, which were saved in the df\_clean DataFrame.
+
+\subsection{Sampling}\label{sampling}
+
+Due to computational constraints, a 1\% random sample
+(\textasciitilde29,912 reviews) was taken for experimentation and saved
+as df\_sample. This subset was large enough to test the efficiency of
+LSH while maintaining the dataset's diversity.
+
+\subsection{Text Normalization}\label{text-normalization}
+
+Each review was normalized using the following steps, and the cleaned
+text was saved in the text norm column:
+
+\begin{itemize}
+\item
+  Convert text to lowercase
+\item
+  Remove punctuation and non-alphanumeric characters
+\item
+  Collapse multiple spaces
+\end{itemize}
+
+\section{\texorpdfstring{ Shingling}{ Shingling}}\label{shingling}
+
+The next step was word-level shingling, where each review was divided
+into overlapping groups of three consecutive words (k = 3). \RL{}We
+chose k = 3 because it provides a balanced trade-off between recall and
+precision. Smaller k values (e.g., k=2) increase recall but can merge
+semantically different texts, while larger k values (k=4--5) increase
+precision but may miss paraphrases.
+
+Then, Stopwords (such as \emph{the}, \emph{and}, \emph{is}) were removed
+to reduce noise.
+
+Example:
+
+Text: ``I really enjoyed reading this book''\\
+→ Shingles (k=3): \{``really enjoyed reading'', ``enjoyed reading
+book''\}
+
+Each document was therefore represented as a set of shingles, capturing
+local word patterns and phrase structure. This representation was saved
+in the shingles column.
+
+\section{MinHash Signatures}\label{algorithms}
+
+
+
+Since directly comparing large sets is computationally expensive, I
+applied \textbf{MinHashing} to create compact representations of each
+review's shingles. MinHash simulates random permutations to produce
+short signatures, where the probability that two signatures match at a
+given position equals their Jaccard similarity.
+
+I used 128 permutations per document to balance accuracy and memory
+efficiency. The resulting signatures were stored in the minhash column.
+
+\section{Locality-Sensitive Hashing
+(LSH)}\label{locality-sensitive-hashing-lsh}
+
+To avoid comparing every pair of the 29,912 reviews, Locality-Sensitive
+Hashing (LSH) was applied on top of the MinHash signatures. LSH divides
+each signature into bands and hashes them into buckets. Reviews that
+fall into the same bucket in at least one band are considered candidates
+for being similar.\\
+This method drastically reduced the number of required pairwise
+comparisons while maintaining high recall for near-duplicate reviews.
+
+\subsection{LSH Parameters and Setup}\label{lsh-parameters-and-setup}
+
+The following parameters were used for Locality-Sensitive Hashing (LSH):
+
+\begin{itemize}
+\item
+  \textbf{Threshold (t):} 0.6 (minimum Jaccard similarity)
+\item
+  \textbf{Bands (b):} 18
+\item
+  \textbf{Rows per band (r):} 7 $\Rightarrow$ (18 $\times$ 7 $\approx$ 128 hash values)
+
+\end{itemize}
+
+A threshold of \textbf{0.6} was chosen as it provides a balanced
+trade-off between recall and precision.\\
+A lower threshold (e.g., 0.5) would increase the number of candidate
+pairs but also the verification cost, whereas higher thresholds would
+risk missing potential duplicates.
+
+For \textbf{LSH index construction}, a unique identifier was generated
+for each review to enable efficient indexing.\\
+Specifically, the identifier was created by concatenating the book\_id
+with the corresponding row index (in the format book\_id\_row\_index).
+This composite key ensured that each review remained distinct while
+maintaining its association with the original book information. The
+resulting identifier was stored in the unique\_key column.
+
+To ensure accuracy, self-pairs and duplicate pairs were removed prior to
+verification.
+
+This process yielded the following results:
+
+\begin{itemize}
+\item
+  \textbf{Candidate pairs:} 331
+\item
+  \textbf{Total possible pairs:} 29,912 × 29,911 / 2 = 447,348,916
+\item
+  \textbf{Reduction:} 99.9999\% fewer comparisons
+\end{itemize}
+
+These results clearly demonstrate how scalable and efficient the LSH
+approach is for massive datasets.
+
+\section{Similarity Computation and
+Verification}\label{similarity-computation-and-verification}
+
+The Jaccard similarity function was applied to compute the exact
+similarity between the shingles of each candidate pair.\\
+This function measures the ratio of the intersection to the union of two
+sets, defined as:
+
+\[J(A,B) = \frac{\mid A \cap B \mid}{\mid A \cup B \mid}
+\]
+
+Only pairs with a Jaccard similarity above 0.6 were retained as verified
+duplicates or near-duplicates
+
+\subsection{Results}\label{results}
+
+\begin{itemize}
+\item
+  331 verified similar pairs
+\item
+  Mean similarity: 0.994
+\item
+  Median similarity: 1.000
+\item
+  Min similarity:0.667
+\end{itemize}
+
+These metrics confirm that the LSH candidate selection was highly
+precise, with nearly all shortlisted pairs exhibiting strong semantic or
+literal overlap.
+
+\subsection{Similarity Distribution}\label{similarity-distribution}
+
+The table below summarizes the distribution of similarity scores among
+the 331 verified pairs:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1891}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1654}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2203}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Range
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Count
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Percentage (\%)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0.60 -- 0.65 & 0 & 0.0\% \\
+0.65 -- 0.70 & 1 & 0.3\% \\
+0.70 -- 0.75 & 3 & 0.9\% \\
+0.75 -- 0.80 & 0 & 0.0\% \\
+0.80 -- 0.85 & 2 & 0.6\% \\
+0.85 -- 0.90 & 0 & 0.0\% \\
+0.90 -- 0.95 & 5 & 1.5\% \\
+0.95 -- 1.00 & 320 & 96.7\% \\
+Total & 331 & 100.0\% \\
+\end{longtable}
+}
+
+\section{Similarity Evaluation}\label{similarity-evaluation}
+
+The resulting similarity distribution (Table 1) revealed that 96.7\% of
+all pairs had a similarity score between 0.95 and 1.00, confirming that
+nearly all detected pairs were true near-duplicates or identical
+reviews.
+
+This high-precision outcome demonstrates the effectiveness of the chosen
+parameters --- 3-word shingles, 128 MinHash permutations, and an LSH
+threshold of 0.6 --- in filtering out dissimilar reviews while
+successfully retaining genuine duplicates.
+
+All results were exported into multiple files for transparency and
+further analysis:
+
+\begin{itemize}
+\item
+  similar\_pairs.csv -- a compact version containing review identifiers
+  and similarity scores.
+\item
+  similar\_pairs\_FULL\_TEXT.csv -- includes the complete review texts
+  for each pair.
+\item
+  similar\_pairs\_FULL\_REPORT.txt -- a detailed, human-readable summary
+  of all matched pairs.
+\item
+  summary\_statistics.txt -- provides overall statistics and the
+  similarity distribution.
+\end{itemize}
+
+Together, these outputs formed a complete, scalable pipeline capable of
+detecting and verifying near-duplicate reviews within the Amazon Books
+Reviews dataset.
+
+\section{Example of Similar Pairs}\label{example-of-similar-pairs}
+
+Example (Similarity = 1.000)
+
+PAIR \#1
+
+Similarity Score: 1.000
+
+Key 1: B000GLN7HQ\_18665
+
+Key 2: B000HWEE7Q\_22204
+
+REVIEW 1 (COMPLETE TEXT):
+
+This would be a good starting place for someone unfamiliar with
+Christie\textquotesingle s works. It is one of the Hercule Poirot
+detective stories; I hadn\textquotesingle t read any of them before and
+therefore can say that it doesn\textquotesingle t seem to have a
+negative effect reading this one out of sequence. (It did make me want
+to read more of the series though!)The story is set in a small English
+village where gossip is the favored pasttime and nothing much of
+significance ever really happens; however, the village inhabitants are
+stunned when two mysteries unfold at once: one involving blackmail and a
+suicide, and the other involving murder. Hercule Poirot, who has just
+moved to the village to retire, is irresistibly pulled into the intrigue
+and starts to investigate. He is aided by the village doctor, Dr.
+Sheppard, who narrates the tale.It\textquotesingle s been a long time
+since I was completely absorbed in a mystery, and this delivered that
+deliciously maddening desire to have to know- right now-\/- who done it?
+It\textquotesingle s difficult to put it down once started, and the
+ending was nothing short of nail-biting shock. Christie is a master at
+keeping the reader guessing and then delivering an emotionally stunning
+wrap-up of her tale. This one kept me on the edge of my seat, and I
+can\textquotesingle t wait to read more of her novels.
+
+REVIEW 2 (COMPLETE TEXT):
+
+(Identical to Review 1)
+
+PAIR \#331
+
+Similarity Score: 0.667
+
+Key 1: 0460112872\_19140
+
+Key 2: B000L28LS0\_15176
+
+REVIEW 1 (COMPLETE TEXT):
+
+Easy to get on my Kindle and to transport it everywhere. Rapid download
+to all my connected electronics. And you cannot go wrong with so little
+money for it. Love those classics.
+
+REVIEW 2 (COMPLETE TEXT):
+
+Easy to get on my Kindle and to transport it everywhere. Rapid download
+to all my connected electronics. And you cannot go wrong with free.
+
+\section{\texorpdfstring{Conclusion }{Conclusion }}\label{conclusion}
+
+In this project, I built a scalable end-to-end pipeline to detect
+duplicate and near-duplicate reviews within the Amazon Books Reviews
+dataset, which contains approximately three million entries.
+
+The approach is simple yet effective. Each review was converted into
+3-word shingles (k=3), then compressed using MinHash with 128 random
+permutations, and finally indexed with Locality-Sensitive Hashing (LSH)
+using a Jaccard similarity threshold of 0.6 to efficiently shortlist
+candidate pairs.
+
+When tested on a 1\% random sample (≈29,912 reviews), the total number
+of possible review pairs (about 4.47×10⁸) was reduced to just 331
+candidates by the LSH step. After applying the exact Jaccard similarity,
+all 331 pairs were confirmed to have similarity values above 0.6, proving
+that the method achieved high accuracy while drastically reducing
+computational cost.
+
+The entire pipeline was implemented using the Datasketch Python library,
+which provides simple yet powerful tools for MinHashing and LSH.
+Moreover, it runs smoothly on Google Colab's free environment, making it
+an ideal solution for large-scale text processing without requiring
+high-end hardware.
+
+Overall, this project demonstrated that MinHashing and LSH, when
+combined with the Datasketch library, provide a fast, memory-efficient,
+and reliable approach for solving large-scale text similarity problems.
+
+\section{References}\label{references}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Rajaraman, A., \& Ullman, J. D. (2011). \emph{Mining of Massive
+  Datasets}. Cambridge University Press.
+\item
+  Datasketch Python Library: \url{https://ekzhu.github.io/datasketch}
+\end{enumerate}
+
+\section{\texorpdfstring{\textbf{Declaration by
+author}}{Declaration by author}}\label{declaration-by-author}
+
+I declare that this material, which I now submit for assessment, is
+entirely my own work and has not been taken from the work of others,
+save and to the extent that such work has been cited and acknowledged
+within the text of my work. I understand that plagiarism, collusion, and
+copying are grave and serious offences in the university and accept the
+penalties that would be imposed should I engage in plagiarism, collusion
+or copying. This assignment, or any part of it, has not been previously
+submitted by me or any other person for assessment on this or any other
+course of study.
+
+\end{document}
