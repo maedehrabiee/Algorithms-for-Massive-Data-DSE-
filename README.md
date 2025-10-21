@@ -9,24 +9,27 @@
 ---
 
 ## 📘 Project Description
-A scalable end-to-end pipeline for detecting duplicate and near-duplicate book reviews in the Amazon Books dataset (~3 million records).  
-The approach uses **3-word shingles**, **MinHash (128 permutations)**, and **Locality-Sensitive Hashing (LSH)** with a **Jaccard similarity threshold = 0.6**.  
+This project builds a **scalable and efficient pipeline** to detect **duplicate and near-duplicate book reviews** from the **Amazon Books Reviews dataset**.  
+The method combines three main steps:
+- **Shingling:** splitting each review into sequences of 3 words  
+- **MinHashing:** compressing text into compact signatures  
+- **Locality-Sensitive Hashing (LSH):** quickly finding pairs of similar reviews based on Jaccard similarity  
 
-When tested on a 1 % sample (≈ 29,900 reviews), the total number of possible pairs (~4.47 × 10⁸) was reduced to just **331 candidates**, all confirmed ≥ 0.6 Jaccard.  
-Implemented in **Python** with the **Datasketch** library and runs smoothly on **Google Colab**.
+The pipeline is implemented in **Python** using the **Datasketch** library and runs smoothly in **Google Colab**, making it suitable for large-scale text similarity detection tasks.
 
 ---
 
-## 🧰 Tools
+## 🧰 Tools and Technologies
 - Python  
 - Datasketch  
-- NumPy, Pandas  
+- NumPy & Pandas  
 - Google Colab  
 
 ---
 
 ## 📁 Dataset
-[Kaggle – Amazon Books Reviews Dataset](https://www.kaggle.com/datasets/mohamedbakhet/amazon-books-reviews)
+- **Source:** [Amazon Books Reviews Dataset](https://www.kaggle.com/datasets/mohamedbakhet/amazon-books-reviews)  
+- **Main column used:** `review/text`
 
 ---
 
